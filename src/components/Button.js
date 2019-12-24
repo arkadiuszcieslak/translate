@@ -7,7 +7,7 @@ class Button extends React.Component {
     return (
       <button className={`ui button ${color}`}>
         <LanguageContext.Consumer>
-          {(value) => value === 'polish' ? 'Wyślij' : 'Submit'}
+          {({language}) => language === 'polish' ? 'Wyślij' : 'Submit'}
         </LanguageContext.Consumer>
       </button>
     );
